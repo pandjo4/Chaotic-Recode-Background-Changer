@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 10px;
+        width: 150px;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+      }
+      button {
+        margin-top: 5px;
+        width: 100%;
+        padding: 5px;
+      }
+	  body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #1e1e1e; /* tamna pozadina popup-a */
+  color: #fff;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+#applyBtn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#applyBtn:hover {
+  background-color: #45a049;
+}
+
+.colorBtn {
+  flex: 0 0 48%;  /* zauzima ~50% širine svakog reda */
+  margin: 1% 1%;  /* razmak između dugmadi */
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; /* sprječava da tekst prelomi u novi red */
+  overflow: hidden;    /* skrati tekst ako je predugačak */
+  text-overflow: ellipsis; /* dodaj ... ako ne stane */
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+
+.colorBtn[data-color="#00ff00"] { background-color: #00ff00; color: #000; }
+.colorBtn[data-color="#add8e6"] { background-color: #add8e6; color: #000; }
+.colorBtn[data-color="#ffd700"] { background-color: #ffd700; color: #000; }
+.colorBtn[data-color="#d3d3d3"] { background-color: #d3d3d3; color: #000; }
+
+.colorBtn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+    </style>
+  </head>
+  <body>
+    <input type="number" id="bgNumber" min="1" max="99" placeholder="Unesi broj (1-99)">
+<button id="applyBtn">Set picture</button>
+
+<hr>
+
+<button class="colorBtn" data-color="#87CEEB">Sky Blue</button>
+<button class="colorBtn" data-color="#98FF98">Mint Green</button>
+<button class="colorBtn" data-color="#DDB67D">Honey Brown</button>
+<button class="colorBtn" data-color="#C0C0C0">Silver Gray</button>
+
+
+    <script src="popup.js"></script>
+  </body>
+</html>

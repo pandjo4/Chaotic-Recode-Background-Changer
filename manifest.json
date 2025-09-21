@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Chaotic Recode Background Changer",
+  "version": "1.1",
+  "description": "Omogućava izbor pozadinske slike i boje u Chaotic Recode igri.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["backgrounds/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
